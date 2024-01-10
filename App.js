@@ -1,35 +1,56 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-  /* <div id="parent">
-        <div id="child">
-            <h1>I'm an H1 tag</h1>
-            <h2>I'm an H2 tag</h2>
-        </div>
-         <div id="child2">
-            <h1>I'm an H1 tag</h1>
-            <h2>I'm an H2 tag</h2>
-        </div>
-    </div> */
 
-//structrure created using JS
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "This is Namaste React🚀"),
-    React.createElement("h2", {}, "By Shivam Kumar"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm a child H1 tag"),
-    React.createElement("h2", {}, "I'm a child H2 tag"),
-  ]),
-]);
+// React.createElement => Object => Becomes HTMLElement when rendered
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello World From React!"
+// const heading = React.createElement(
+//   "h1",
+//   { id: "heading" },
+//   "Namaste React 🚀"
+//   );
+
+const elm = (
+  <span>React Element</span>
 );
 
-// console.log(heading);
-console.log(parent);
+
+
+
+
+const Title = function () {
+  return (
+    <h1 className="head" tabIndex="1">
+      Namaste React Title using JSX 🚀
+    </h1>
+  );
+};
+
+const number = 1000;
+
+const HeadComponent = () => (
+  <div id="container">
+    <Title />
+    <Title></Title>
+    {Title()}
+    {console.log('here')}
+    <h2>Love you {number*3}!🦸</h2>
+    {jsxHeading}
+    <h1 className="heading">Namaste From Single line</h1>
+  </div>
+);
+
+const HeadingComponent = () => {
+  return <h1 className="heading">Namaste React Functional Component</h1>;
+};
+
+// React Element
+const jsxHeading = (
+  <h1 className="head" tabIndex="1">
+    {elm}
+    Namaste React using JSX element🚀
+  </h1>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// root.render(jsxHeading);
+root.render(<HeadComponent />);
