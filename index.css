@@ -1,3 +1,13 @@
 #heading{
     color: black;
 }
+
+.logo-img{
+    width: 100px;
+    height: 100px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+}
