@@ -4,6 +4,8 @@ class UserClass extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
+        count: 0,
+        count2: 0,
       userinfo: {
         name: "Dummy User",
         location: "Dummy Location",
@@ -20,18 +22,27 @@ class UserClass extends React.Component {
   
     }
 
-    componentDidUpdate(){
-      console.log("Component Updated");
+    componentDidUpdate(prevProps,prevState){
+        /**if we want to update the state on the basis of previous state,
+         *  ie; if we want to update the state only when the previous state is different from the current state
+         * {based on count like we used to do in useEffect dependency array} */
+        // if(this.state.count === prevState.count || this.state.count2 === prevState.count2){
+
+        // }
+        this.timer = setInterval(()=>{
+            console.log("Namaste React");
+        },1000);
+    //   console.log("Component Updated");
     }
 
     componentWillUnmount(){
-        console.log("Component Unmounted");
+        clearInterval(this.timer);
+        // console.log("Component Unmounted");
         }
 
 
   render() {
     const { name, location, twitter_username,avatar_url} = this.state.userinfo;
-    console.log("Render");
     return (
       <div className="user-card">
         <img src={avatar_url} alt="user" />
