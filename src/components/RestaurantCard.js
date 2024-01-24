@@ -15,13 +15,13 @@ const RestaurantCard = (props) => {
       // <div className="res-card" style={styleCard}>
       //   <h3>Meghna Foods</h3>
       // </div> or it can be written as
-      <div className="res-card" style={{ background: "#f0f0f0" }}>
+      <div className="m-4 p-4 w-[250px] rounded-lg shadow-lg bg-gray-50 hover:bg-gray-200" >
         <img
-          className="res-logo"
+          className="rounded-lg"
           alt="res-logo"
           src={CDN_URL+cloudinaryImageId}
         />
-        <h3>{name}</h3>
+        <h3 className="font-bold py-4 text-lg">{name}</h3>
         <h4>{cuisines.join(", ")}</h4>
         <h4>{avgRating} stars</h4>
         <h4>{costForTwo}</h4>

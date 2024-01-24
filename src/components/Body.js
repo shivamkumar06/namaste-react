@@ -34,30 +34,33 @@ const Body = () => {
 
     return (listOfRestaurants.length === 0) ? <Shimmer/> : (
       <div className="body">
-        <div className="filter">
-            <div className="search">
-                <input className="search-box" type="text" placeholder="Search for restaurants" value={searchText} onChange={(event)=>{
+        <div className="filter flex">
+            <div className="search m-4 p-4">
+                <input className="border border-solid border-black" type="text" placeholder="Search for restaurants" value={searchText} onChange={(event)=>{
                     setSearchText(event.target.value);
                 }}/>
-                <button onClick={()=>{
+                <button className="px-4 py-1 bg-green-100 m-4 rounded-lg" onClick={()=>{
                     const filteredRestaurant = listOfRestaurants.filter(
                         (restaurant)=> restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()));  
                         setFilteredRestaurant(filteredRestaurant);
                 }}>Search</button>
             </div>
-            <button className="filter-btn" onClick={()=>{
+            <div className="search m-4 p-4 flex items-center">
+            <button className="px-2 py-1 bg-grey-200 m-4 rounded-lg" onClick={()=>{
                   const filteredList = listOfRestaurants.filter(
                     (restaurant)=> restaurant.info.avgRating > 4);  
                    
                     setFilteredRestaurant(filteredList);        
             }} >Top Rated Restaurants</button>
-            <button className="filter-btn" onClick={()=>{
+            <button className="px-2 py-1 bg-grey-200 m-4 rounded-lg" onClick={()=>{
                 
                 setSearchText("");
                 setFilteredRestaurant(listOfRestaurants);
             }}>Clear Filters</button>
+            </div>
+         
         </div>
-        <div className="res-container">
+        <div className="flex flex-wrap">
           {
             filteredRestaurants.map((restaurant)=> (
                 <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}> <RestaurantCard  resData={restaurant}/></Link>
