@@ -42,10 +42,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter flex">
+      <div className="filter flex flex-wrap">
         <div className="search m-4 p-4">
           <input
-            className="border border-solid border-black"
+            className="border border-solid border-black p-2"
             type="text"
             placeholder="Search for restaurants"
             value={searchText}
@@ -54,7 +54,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-4 py-1 bg-green-100 m-4 rounded-lg"
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg shadow-md"
             onClick={() => {
               const filteredRestaurant = listOfRestaurants.filter(
                 (restaurant) =>
@@ -70,7 +70,7 @@ const Body = () => {
         </div>
         <div className="search m-4 p-4 flex items-center">
           <button
-            className="px-2 py-1 bg-grey-200 m-4 rounded-lg"
+            className="px-2 py-2 bg-gray-200 m-4 rounded-lg shadow-md"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (restaurant) => restaurant.info.avgRating > 4
@@ -82,7 +82,7 @@ const Body = () => {
             Top Rated Restaurants
           </button>
           <button
-            className="px-2 py-1 bg-grey-200 m-4 rounded-lg"
+            className="px-2 py-2 bg-gray-200 m-4 rounded-lg shadow-md"
             onClick={() => {
               setSearchText("");
               setFilteredRestaurant(listOfRestaurants);
@@ -91,7 +91,7 @@ const Body = () => {
             Clear Filters
           </button>
           <div>
-            <label>UserName </label>
+            <label>Username </label>
             <input
               className="border border-black p-2"
               value={loggedInUser}
@@ -102,7 +102,7 @@ const Body = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex-container flex flex-wrap">
         {filteredRestaurants.map((restaurant) => (
           <Link
             key={restaurant.info.id}

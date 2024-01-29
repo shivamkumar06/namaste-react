@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.flex-container {
+    margin-left: 5rem !important;
+}
