@@ -1,0 +1,66 @@
+{
+    "info": {
+        "id": "354834",
+        "name": "Wow! Momo",
+        "cloudinaryImageId": "f6de3a8932bc042ca20efc3e20a2b865",
+        "locality": "Kharadi",
+        "areaName": "Kharadi",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "Tibetan",
+            "Healthy Food",
+            "Asian",
+            "Chinese",
+            "Snacks",
+            "Continental",
+            "Desserts",
+            "Beverages"
+        ],
+        "avgRating": 4.2,
+        "parentId": "1776",
+        "avgRatingString": "4.2",
+        "totalRatingsString": "1K+",
+        "sla": {
+            "deliveryTime": 39,
+            "lastMileTravel": 4.9,
+            "serviceability": "SERVICEABLE",
+            "slaString": "35-40 mins",
+            "lastMileTravelString": "4.9 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-02-14 03:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹99"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/wow-momo-kharadi-pune-354834",
+        "type": "WEBLINK"
+    }
+}
