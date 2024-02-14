@@ -21,7 +21,7 @@ const Body = () => {
     );
     const json = await data.json();
     const value =
-      json.data.cards[1].card.card.gridElements.infoWithStyle?.restaurants;
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     setListOfRestaurant(value);
     setFilteredRestaurant(value);
   };
@@ -38,7 +38,7 @@ const Body = () => {
 
   const { loggedInUser, setUserName } = useContext(UserContext);
 
-  return listOfRestaurants.length === 0 ? (
+  return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -47,6 +47,7 @@ const Body = () => {
           <input
             className="border border-solid border-black p-2"
             type="text"
+            data-testid="searchInput"
             placeholder="Search for restaurants"
             value={searchText}
             onChange={(event) => {
@@ -56,7 +57,7 @@ const Body = () => {
           <button
             className="px-4 py-2 bg-green-100 m-4 rounded-lg shadow-md"
             onClick={() => {
-              const filteredRestaurant = listOfRestaurants.filter(
+              const filteredRestaurant = listOfRestaurants?.filter(
                 (restaurant) =>
                   restaurant.info.name
                     .toLowerCase()
@@ -103,7 +104,7 @@ const Body = () => {
         </div>
       </div>
       <div className="flex-container flex flex-wrap">
-        {filteredRestaurants.map((restaurant) => (
+        {filteredRestaurants?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}

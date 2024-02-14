@@ -2,6 +2,23 @@ import { render, screen } from "@testing-library/react";
 import Contact from "../Contact";
 import "@testing-library/jest-dom";
 
+// beforeAll(() => {
+//   console.log("Before All");
+// });
+
+// beforeEach(() => {
+//   console.log("Before Each");
+// });
+
+// afterEach(() => {
+//   console.log("After Each");
+// });
+
+// afterAll(() => {
+//   console.log("After All");
+// });
+
+
 describe("Contact Component", () => {
   test("Should load contact us component", () => {
     render(<Contact />);
