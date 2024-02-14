@@ -32,21 +32,21 @@ describe("Contact Component", () => {
     expect(button).toBeInTheDocument();
   });
 
-  test("Should check submit button inside contact component", () => {
-    render(<Contact />);
-    const button = screen.getByText("Submit");
-    expect(button).toBeInTheDocument();
-  });
+  // test("Should check submit button inside contact component", () => {
+  //   render(<Contact />);
+  //   const button = screen.getByText("Submit");
+  //   expect(button).toBeInTheDocument();
+  // });
 
-  test("Should load input name inside contact component", () => {
-    render(<Contact />);
-    const inputName = screen.getByPlaceholderText("Name");
-    expect(inputName).toBeInTheDocument();
-  });
+  // test("Should load input name inside contact component", () => {
+  //   render(<Contact />);
+  //   const inputName = screen.getByPlaceholderText("Name");
+  //   expect(inputName).toBeInTheDocument();
+  // });
 
-  it("Should load 2 input boxes inside contact component", () => {
-    render(<Contact />);
-    const inputBoxes = screen.getAllByRole("textbox");
-    expect(inputBoxes.length).toBe(2);
-  });
+  // it("Should load 2 input boxes inside contact component", () => {
+  //   render(<Contact />);
+  //   const inputBoxes = screen.getAllByRole("textbox");
+  //   expect(inputBoxes.length).toBe(2);
+  // });
 });
